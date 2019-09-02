@@ -1,0 +1,135 @@
+@font-face{
+  src: url(https://netology-code.github.io/html-2-diploma/sources/fonts/OpenSans-Regular.woff);
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-style: normal;
+}
+  
+@font-face{
+  src: url(https://netology-code.github.io/html-2-diploma/sources/fonts/OpenSans-Bold.woff);
+  font-family: "Open Sans";
+  font-weight: 700;
+  font-style: normal;
+}
+  
+body {
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+}
+  
+input, button {
+  font-family: inherit;
+}
+
+.header {
+	display: block;
+	position: relative;
+  
+	background-image: url("images/football_767.jpg");
+	background-position: center center;
+	background-color: #000000;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+  padding-top: 33px;
+  padding-bottom: 70px;
+  min-width: 100%;
+}
+
+.header::before {
+  content: "";
+  background-color: #1a2145;
+  opacity: 0.95;
+  
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.container {
+  width: 280px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  z-index: 2;
+}
+
+.logo-surface__text {
+  width: 50%;
+  max-width: 205px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 132px;
+}
+
+.page-title {
+  flex-direction: column;
+  margin-bottom: 90px;
+  font-size: 28px;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.title-last__part {
+  display: block;
+  margin-top: 25px;
+  margin-left: 45px;
+
+}
+
+.store-buttons {
+  color: #fff;
+}
+
+.store-button {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 35px;
+  background-color: #5e42b0;
+  border-radius: 16px;
+  border: none;
+  color: #fff;
+  text-align: left;
+  text-transform: uppercase;
+  font-size: 8px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 15px;
+}
+
+.store-button:focus {
+  outline: none;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.store-logo {
+  width: 22px;
+  fill: #fff;
+  margin-left: 77px;
+}
+
+.button-text {
+  margin-left: 7px;
+}
+
+.store-button__text, .store-button__name {
+  display: block;
+}
+
+.store-button__name {
+  font-weight: 700;
+}
+
+@media (max-width: 640px) {
+  .container {
+
+  }
+}
