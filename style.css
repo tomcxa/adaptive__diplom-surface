@@ -42,7 +42,7 @@ input, button {
 .header::before {
   content: "";
   background-color: #1a2145;
-  opacity: 0.95;
+  opacity: 0.93;
   
   position: absolute;
   top: 0;
@@ -55,8 +55,11 @@ input, button {
   width: 280px;
   margin-left: auto;
   margin-right: auto;
-  position: relative;
   z-index: 2;
+}
+
+.header-container {
+  position: relative;
 }
 
 .logo-surface__text {
@@ -128,8 +131,83 @@ input, button {
   font-weight: 700;
 }
 
-@media (max-width: 640px) {
-  .container {
+.content {
+  position: relative;
+  width: 100%;
+}
 
-  }
+.article {
+  
+}
+
+.title-article {
+  font-size: 50px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #e7e7e7;
+  margin-top: 19px;
+  margin-bottom: 14px;
+}
+
+.article-preview-img {
+  display: block;
+}
+
+.article-section {
+  padding-top: 55px;
+  padding-bottom: 50px;
+}
+
+.section-connection {
+  background-color: #fafafa;
+}
+
+.section-collaboration {
+  background-color: #f5f4f9;
+}
+
+.section-growth {
+  background-color: #5e42b0;
+}
+
+.players-article .section-growth {
+  background-color: #090c35;
+}
+
+.section-header {
+  
+}
+
+.section-number {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 700;
+  margin-right: 10px;
+
+  border-bottom: 4px solid #5e42b0;
+}
+
+.atricle-section-title {
+  display: inline;
+  font-size: 23px;
+  font-weight: 700;
+  color: #c1c1c1;
+  text-transform: uppercase;
+}
+
+.article-content {
+  line-height: 18px;
+  margin-top: 28px;
+}
+
+@media (max-width: 640px) {
+  
+}
+
+@media (max-width: 641px) and (min-width: 960px) {
+
+}
+
+@media (max-width: 961px) and (min-width: 1920px) {
+  
 }
