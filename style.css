@@ -52,14 +52,11 @@ input, button {
 }
 
 .container {
+  position: relative;
   width: 280px;
   margin-left: auto;
   margin-right: auto;
   z-index: 2;
-}
-
-.header-container {
-  position: relative;
 }
 
 .logo-surface__text {
@@ -68,11 +65,11 @@ input, button {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 132px;
 }
 
 .page-title {
   flex-direction: column;
+  margin-top: 132px;
   margin-bottom: 90px;
   font-size: 28px;
   font-weight: 700;
@@ -187,6 +184,14 @@ input, button {
   border-bottom: 4px solid #5e42b0;
 }
 
+.athlets-article .section-growth .section-number {
+  border-bottom: 4px solid #fff;
+}
+
+.players-article .section-growth .section-number {
+  color: #fff;
+}
+
 .atricle-section-title {
   display: inline;
   font-size: 23px;
@@ -198,6 +203,71 @@ input, button {
 .article-content {
   line-height: 18px;
   margin-top: 28px;
+}
+
+.section-growth .article-content {
+  color: #fff;
+}
+
+
+
+
+.footer {
+  position: relative;
+  background-image: url("images/game_767.jpg");
+  background-color: #000000;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+
+  padding-top: 100px;
+  padding-bottom: 10px;
+  min-width: 100%;
+}
+
+.footer::before {
+  content: "";
+  position: absolute;
+  background-color: #1a2145;
+  opacity: 0.93;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.logo-surface {
+  display: block;
+  fill: #fff;
+  width: 57px;
+  padding: 13px 8px;
+  border-radius: 15px;
+  background-color: #5e42b0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 55px;
+}
+
+.footer-large__text {
+  display: block;
+  text-align: center;
+  font-size: 32px;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.footer-small__text {
+  display: block;
+  font-size: 14px;
+  text-align: center;
+  color: #9b8ec1;
+  text-transform: uppercase;
+  margin-bottom: 72px;
+}
+
+.footer .store-buttons {
+  margin-bottom: 80px;
 }
 
 @media (max-width: 640px) {
