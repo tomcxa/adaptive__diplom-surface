@@ -53,10 +53,9 @@ input, button {
 
 .container {
   position: relative;
-  width: 280px;
-  margin-left: auto;
-  margin-right: auto;
-  z-index: 2;
+  width: calc(100%-40px);
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .logo-surface__text {
@@ -68,11 +67,15 @@ input, button {
 }
 
 .page-title {
-  flex-direction: column;
+  display: block;
+  width: 280px;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 132px;
   margin-bottom: 90px;
   font-size: 28px;
   font-weight: 700;
+  line-height: 31.32px;
   color: #fff;
   text-transform: uppercase;
 }
@@ -86,12 +89,15 @@ input, button {
 
 .store-buttons {
   color: #fff;
+  width: 280px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .store-button {
   display: flex;
   flex-wrap: wrap;
-  width: 100%;
+  width: 280px;
   height: 35px;
   background-color: #5e42b0;
   border-radius: 16px;
@@ -100,8 +106,6 @@ input, button {
   text-align: left;
   text-transform: uppercase;
   font-size: 8px;
-  margin-left: auto;
-  margin-right: auto;
   margin-bottom: 15px;
 }
 
@@ -134,7 +138,17 @@ input, button {
 }
 
 .article {
-  
+  position: relative;
+}
+
+.article-preview-img {
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-top: 80px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .title-article {
@@ -143,11 +157,7 @@ input, button {
   text-transform: uppercase;
   color: #e7e7e7;
   margin-top: 19px;
-  margin-bottom: 14px;
-}
-
-.article-preview-img {
-  display: block;
+  margin-bottom: 250px;
 }
 
 .article-section {
@@ -156,6 +166,7 @@ input, button {
 }
 
 .section-connection {
+  padding-top: 80px;
   background-color: #fafafa;
 }
 
@@ -169,10 +180,6 @@ input, button {
 
 .players-article .section-growth {
   background-color: #090c35;
-}
-
-.section-header {
-  
 }
 
 .section-number {
@@ -209,8 +216,42 @@ input, button {
   color: #fff;
 }
 
+.section-bottom__page {
+  position: relative;
+}
 
+.section-bottom__page-img {
+  width: 100%;
+}
 
+.section-bottom__page-number {
+  color: #fff;
+  border-bottom: 4px solid #8f7bc8;
+  
+}
+
+.section-bottom__page-number:before {
+  content: "";
+  display: block;
+  /* position: absolute; */
+  width: 70px;
+  height: 70px;
+  background-color: #5e42b0;
+}
+
+.section-bottom__page-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #e7e7e7;
+  text-transform: uppercase;
+}
+
+.section-bottom__page-content {
+  font-size: 16px;
+  line-height: 20px;
+  margin-top: 25px;
+  margin-bottom: 80px;
+}
 
 .footer {
   position: relative;
@@ -270,14 +311,61 @@ input, button {
   margin-bottom: 80px;
 }
 
-@media (max-width: 640px) {
+@media (min-width: 641px) {
   
 }
 
-@media (max-width: 641px) and (min-width: 960px) {
+@media (min-width: 641px) and (max-width: 960px) {
+  .header {
+    display: block;
+    position: relative;
+    
+    background-image: url("images\football_1280.jpg");
+  
+    padding-top: 38px;
+    padding-bottom: 93px;
+  }
 
+  .container {
+    width: calc(100%-66px);
+  }
+
+  .store-buttons {
+    display: flex;
+    width: 100%; 
+  }
+
+  .store-button {
+    width: 314px;
+    height: 80px;
+  }
+
+  .store-button {
+    border-radius: 40px;
+    border: none;
+    color: #fff;
+    text-align: left;
+    text-transform: uppercase;
+    font-size: 8px;
+    margin-bottom: 15px;
+  }
+  
+  .store-button:focus {
+    outline: none;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  }
+  
+  .store-logo {
+    width: 46px;
+    fill: #fff;
+    margin-left: 77px;
+  }
+  
+  .button-text {
+    margin-left: 7px;
+  }
 }
 
-@media (max-width: 961px) and (min-width: 1920px) {
+@media (min-width: 961px) and (max-width: 1920px) {
   
 }
