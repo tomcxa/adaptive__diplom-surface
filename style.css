@@ -25,7 +25,6 @@ input, button {
 }
 
 .header {
-	display: block;
 	position: relative;
   
 	background-image: url("images/football_767.jpg");
@@ -53,7 +52,6 @@ input, button {
 
 .container {
   position: relative;
-  width: calc(100%-40px);
   margin-left: 20px;
   margin-right: 20px;
 }
@@ -75,7 +73,6 @@ input, button {
   margin-bottom: 90px;
   font-size: 28px;
   font-weight: 700;
-  line-height: 31.32px;
   color: #fff;
   text-transform: uppercase;
 }
@@ -97,6 +94,7 @@ input, button {
 .store-button {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   width: 280px;
   height: 35px;
   background-color: #5e42b0;
@@ -106,6 +104,9 @@ input, button {
   text-align: left;
   text-transform: uppercase;
   font-size: 8px;
+}
+
+.store-button:nth-child(1) {
   margin-bottom: 15px;
 }
 
@@ -139,6 +140,7 @@ input, button {
 
 .article {
   position: relative;
+  margin-top: 19px;
 }
 
 .article-preview-img {
@@ -149,6 +151,12 @@ input, button {
   margin-top: 80px;
   margin-left: auto;
   margin-right: auto;
+  z-index: 33;
+}
+
+.article-header {
+  margin-bottom: 250px;
+  margin-top: 0;
 }
 
 .title-article {
@@ -156,8 +164,7 @@ input, button {
   font-weight: 700;
   text-transform: uppercase;
   color: #e7e7e7;
-  margin-top: 19px;
-  margin-bottom: 250px;
+  margin: 0;
 }
 
 .article-section {
@@ -182,17 +189,31 @@ input, button {
   background-color: #090c35;
 }
 
+.section-header {
+  display: flex;
+  align-items: center;
+}
+
 .section-number {
   text-align: center;
   font-size: 14px;
   font-weight: 700;
   margin-right: 10px;
-
-  border-bottom: 4px solid #5e42b0;
 }
 
-.athlets-article .section-growth .section-number {
-  border-bottom: 4px solid #fff;
+.section-number::after {
+  content: "";
+  display: block;
+  width: 17px;
+  height: 4px;
+  background-color: #5e42b0;
+  border-radius: 2px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.athlets-article .section-growth .section-number::after {
+  background-color: #fff;
 }
 
 .players-article .section-growth .section-number {
@@ -200,16 +221,17 @@ input, button {
 }
 
 .atricle-section-title {
-  display: inline;
   font-size: 23px;
   font-weight: 700;
   color: #c1c1c1;
   text-transform: uppercase;
+  margin: 0;
 }
 
 .article-content {
   line-height: 18px;
   margin-top: 28px;
+  margin-bottom: 0;
 }
 
 .section-growth .article-content {
@@ -224,19 +246,25 @@ input, button {
   width: 100%;
 }
 
-.section-bottom__page-number {
-  color: #fff;
-  border-bottom: 4px solid #8f7bc8;
-  
+.section-bottom__page .section-number::after {
+  background-color: #8f7bc8;
 }
 
-.section-bottom__page-number:before {
-  content: "";
-  display: block;
-  /* position: absolute; */
+.section__number-box {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
   width: 70px;
   height: 70px;
   background-color: #5e42b0;
+  margin-top: -60px;
+}
+
+.section-bottom__page-number {
+  color: #fff;
+  display: block;
+  margin: 0;
 }
 
 .section-bottom__page-title {
@@ -244,12 +272,13 @@ input, button {
   font-weight: 700;
   color: #e7e7e7;
   text-transform: uppercase;
+  margin-top: 22px;
+  margin-bottom: 24px;
 }
 
 .section-bottom__page-content {
   font-size: 16px;
   line-height: 20px;
-  margin-top: 25px;
   margin-bottom: 80px;
 }
 
@@ -316,38 +345,49 @@ input, button {
 }
 
 @media (min-width: 641px) and (max-width: 960px) {
-  .header {
-    display: block;
-    position: relative;
-    
-    background-image: url("images\football_1280.jpg");
+  .header {    
+    background-image: url("images/football_1280.jpg");
   
     padding-top: 38px;
     padding-bottom: 93px;
   }
 
   .container {
-    width: calc(100%-66px);
+    margin-left: 33px;
+    margin-right: 33px;
+  }
+
+  .page-title {
+    font-size: 64px;
+    width: 594px;
+    margin-top: 180px;
+    margin-bottom: 313px;
+  }
+
+  .title-last__part {
+    margin-left: 105px;
   }
 
   .store-buttons {
     display: flex;
+    justify-content: space-evenly;
     width: 100%; 
   }
 
   .store-button {
-    width: 314px;
+    max-width: 314px;
     height: 80px;
   }
 
   .store-button {
     border-radius: 40px;
+    justify-content: center;
     border: none;
     color: #fff;
     text-align: left;
     text-transform: uppercase;
-    font-size: 8px;
-    margin-bottom: 15px;
+    font-size: 14px;
+    margin: 0;
   }
   
   .store-button:focus {
@@ -358,11 +398,147 @@ input, button {
   .store-logo {
     width: 46px;
     fill: #fff;
-    margin-left: 77px;
+    margin-left: 0;
   }
   
   .button-text {
-    margin-left: 7px;
+    margin-left: 27px;
+  }
+
+  .article {
+    margin-top: 65px;
+  }
+
+  .article .container {
+    width: 50%;
+  }
+
+  .athlets-article .article-preview-img {
+    margin-top: 0;
+    margin-left: calc(50% - 530px);
+  }
+
+  .players-article .article-preview-img {
+    margin-top: 0;
+    margin-right: 0;
+  }
+
+  .article-header {
+    margin-bottom: 40px;
+  }
+
+  .athlets-article .article-header {
+    margin-right: 33px;
+    margin-left: auto;
+  }
+
+  .title-article {
+    font-size: 80px;
+  }
+
+  .article-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    padding-top: 38px;
+    padding-bottom: 38px;
+  }
+  
+  .players-article .article-section {
+    justify-content: flex-start;
+  }
+
+  .section-connection {
+    padding-top: 0;
+    background-color: #fff;
+  }
+
+  .section-header {
+    margin-bottom: 30px;
+  }
+
+  .section-number {
+    font-size: 18px;
+  }
+  
+  .section-number::after {
+    width: 23px;    
+  }
+
+  .atricle-section-title {
+    font-size: 32px;
+  }
+
+  .article-content {
+    font-size: 16px;
+    margin: 0;
+  }
+
+  .section__number-box {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 116px;
+    height: 116px;
+    background-color: #5e42b0;
+    margin-top: -80px;
+  }
+  
+  .section-bottom__page-number {
+    font-size: 24px;
+    color: #fff;
+    display: block;
+    margin: 0;
+  }
+  
+  .section-bottom__page-number::after {
+    width: 26px;    
+  }
+  
+  .section-bottom__page-title {
+    font-size: 80px;
+    margin-top: 45px;
+    margin-bottom: 30px;
+  }
+  
+  .section-bottom__page-content {
+    font-size: 24px;
+    line-height: 28px;
+    margin-bottom: 90px;
+  }
+
+  .footer {
+    position: relative;
+    background-image: url("images/game_1280.jpg");  
+    padding-top: 125px;
+    padding-bottom: 22px;
+    min-width: 100%;
+  }
+  
+  .logo-surface {
+    display: block;
+    fill: #fff;
+    width: 137px;
+    padding: 25px 13px;
+    border-radius: 30px;
+    background-color: #5e42b0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 55px;
+  }
+  
+  .footer-large__text {
+    font-size: 80px;
+  }
+  
+  .footer-small__text {
+    font-size: 36px;
+    margin-bottom: 285px;
+  }
+  
+  .footer .store-buttons {
+    margin-bottom: 55px;
   }
 }
 
