@@ -97,6 +97,7 @@ input, button {
   align-items: center;
   width: 280px;
   height: 35px;
+  cursor: pointer;
   background-color: #5e42b0;
   border-radius: 16px;
   border: none;
@@ -140,6 +141,7 @@ input, button {
 
 .article {
   position: relative;
+  overflow: hidden;
   margin-top: 19px;
 }
 
@@ -226,6 +228,7 @@ input, button {
   color: #c1c1c1;
   text-transform: uppercase;
   margin: 0;
+  z-index: 34;
 }
 
 .article-content {
@@ -306,6 +309,10 @@ input, button {
   bottom: 0;
 }
 
+.footer-text__and__logo-box {
+  margin-bottom: 72px;
+}
+
 .logo-surface {
   display: block;
   fill: #fff;
@@ -333,15 +340,11 @@ input, button {
   text-align: center;
   color: #9b8ec1;
   text-transform: uppercase;
-  margin-bottom: 72px;
+  
 }
 
 .footer .store-buttons {
   margin-bottom: 80px;
-}
-
-@media (min-width: 641px) {
-  
 }
 
 @media (min-width: 641px) and (max-width: 960px) {
@@ -371,28 +374,25 @@ input, button {
   .store-buttons {
     display: flex;
     justify-content: space-evenly;
-    width: 100%; 
+    width: 100%;
   }
 
   .store-button {
-    max-width: 314px;
+    width: 314px;
     height: 80px;
-  }
-
-  .store-button {
     border-radius: 40px;
     justify-content: center;
-    border: none;
-    color: #fff;
-    text-align: left;
-    text-transform: uppercase;
     font-size: 14px;
     margin: 0;
+  }
+
+  .store-button:nth-child(1) {
+    margin-bottom: 0;
   }
   
   .store-button:focus {
     outline: none;
-    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    box-shadow: 0 22px 36px rgba(0,0,0,0.25), 0 18px 18px rgba(0,0,0,0.22);
   }
   
   .store-logo {
@@ -462,7 +462,7 @@ input, button {
   }
   
   .section-number::after {
-    width: 23px;    
+    width: 20px;    
   }
 
   .atricle-section-title {
@@ -514,13 +514,16 @@ input, button {
     margin-bottom: 55px;
   }
   
+  .footer-text__and__logo-box {
+    margin-bottom: 285px;
+  }
+
   .footer-large__text {
     font-size: 80px;
   }
   
   .footer-small__text {
     font-size: 36px;
-    margin-bottom: 285px;
   }
   
   .footer .store-buttons {
@@ -528,6 +531,252 @@ input, button {
   }
 }
 
-@media (min-width: 961px) and (max-width: 1920px) {
+@media (min-width: 961px) {
+  .header {    
+    background-image: url("images/football_1920.jpg");
   
+    padding-top: 45px;
+    padding-bottom: 110px;
+  }
+
+  .container {
+    width: calc(100% - 30px);
+    max-width: 1532px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .page-title {
+    display: flex;
+    flex-direction: column;
+    font-size: 90px;
+    width: 100%;
+    margin-top: 285px;
+    margin-bottom: 210px;
+  }
+
+  .title-last__part {
+    margin-left: 230px;
+    align-self: flex-end;
+  }
+
+  .store-buttons {
+    display: flex;
+    justify-content: space-evenly;
+    width: 751px; 
+  }
+
+  .store-button {
+    width: 314px;
+    height: 80px;
+    border-radius: 40px;
+    justify-content: center;
+    font-size: 14px;
+    margin: 0;
+  }
+  
+  .store-button:nth-child(1) {
+    margin-bottom: 0;
+  }
+
+  .store-button:focus {
+    outline: none;
+    box-shadow: 0 22px 36px rgba(0,0,0,0.25), 0 18px 18px rgba(0,0,0,0.22);
+  }
+
+  .store-button:hover {
+    box-shadow: 0 0 36px #000;
+  }
+  
+  .store-logo {
+    width: 46px;
+    fill: #fff;
+    margin-left: 0;
+  }
+  
+  .button-text {
+    margin-left: 27px;
+  }
+
+  .article {
+    margin-top: 0px;
+  }
+
+  .article .container {
+    width: 50%;
+    max-width: 755px;
+  }
+
+  .athlets-article .container {
+    margin-left: calc(50% - 33px);
+  }
+
+  .players-article .container {
+    margin-right: calc(50% - 33px);
+  }
+
+  .athlets-article .article-preview-img {
+    margin-top: 27px;
+    margin-right: calc(50% + 33px + 36px);
+  }
+
+  .players-article .article-preview-img {
+    margin-top: 27px;
+    margin-left: calc(35% + 36px);
+  }
+
+  .article-header {
+    margin-top: 0;
+    margin-bottom: 95px;
+  }
+
+  .athlets-article .article-header {
+    margin-left: calc(50% - 33px);
+  }
+
+  .title-article {
+    font-size: 80px;
+    padding-top: 100px;
+  }
+
+  .article-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    padding-top: 55px;
+    padding-bottom: 55px;
+  }
+  
+  .players-article .article-section {
+    justify-content: flex-start;
+  }
+
+  .section-connection {
+    padding-top: 0;
+    background-color: #fff;
+  }
+
+  .section-header {
+    margin-bottom: 30px;
+  }
+
+  .section-number {
+    font-size: 18px;
+  }
+  
+  .section-number::after {
+    width: 20px;    
+  }
+
+  .atricle-section-title {
+    font-size: 36px;
+  }
+
+  .article-content {
+    font-size: 16px;
+    margin: 0;
+  }
+
+  .section-bottom__page {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin: 0;
+  }
+
+  .section-bottom__page:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+
+  .section-bottom__page-img {
+    display: block;
+    width: 50vw;
+  }
+
+  .section-bottom__page .container {
+    width: 35%;
+    max-width: 632px;
+    margin-left: 129px;
+  }
+  .section-bottom__page:nth-child(even) .container {
+    margin-right: 129px;
+    margin-left: auto;
+  }
+
+  .section__number-box {
+    position: absolute;
+    width: 156px;
+    height: 156px;
+    margin-top: 0;
+    margin-left: -207px;
+  }
+  
+  .section-bottom__page:nth-child(even) .section__number-box {
+    margin-left: calc(100% + 51px);
+    order: 2;
+  }
+
+  .section-bottom__page-number {
+    font-size: 24px;
+  }
+  
+  .section-bottom__page-number::after {
+    width: 26px;    
+  }
+  
+  .section-bottom__page-title {
+    font-size: 80px;
+    line-height: 60px;
+    margin: 0;
+  }
+  
+  .section-bottom__page:nth-child(even) .section-bottom__page-title {
+    margin: 0;
+  }
+
+  .section-bottom__page-content {
+    font-size: 24px;
+    line-height: 28px;
+    margin: 0;
+  }
+
+  .footer {
+    background-image: url("images/game_1920.jpg");  
+    padding-top: 125px;
+    padding-bottom: 22px;
+    min-width: 100%;
+  }
+
+  .footer-text__and__logo-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 150px;
+  }
+
+  .logo-surface {
+    width: 137px;
+    padding: 25px 13px;
+    border-radius: 30px;
+    margin: 0;
+  }
+  
+  .footer-text-box {
+    margin-left: 60px;
+  }
+
+  .footer-large__text {
+    font-size: 80px;
+  }
+  
+  .footer-small__text {
+    font-size: 36px;
+  }
+  
+  .footer .store-buttons {
+    margin-bottom: 55px;
+  }
 }
