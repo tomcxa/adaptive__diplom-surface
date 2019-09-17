@@ -69,6 +69,7 @@ input, button {
 }
 
 .page-title {
+  position: relative;
   display: block;
   width: 280px;
   margin-left: auto;
@@ -116,7 +117,7 @@ input, button {
 }
 
 .store-button:focus {
-  outline: none;
+  outline: 0px solid #5e42b0;
   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 
@@ -395,7 +396,6 @@ input, button {
   }
   
   .store-button:focus {
-    outline: none;
     box-shadow: 0 22px 36px rgba(0,0,0,0.25), 0 18px 18px rgba(0,0,0,0.22);
   }
   
@@ -554,12 +554,15 @@ input, button {
     display: flex;
     flex-direction: column;
     font-size: 90px;
-    width: 100%;
+    min-width: 880px;
+    width: 80%;
+    max-width: 1532px;
     margin-top: 285px;
     margin-bottom: 210px;
   }
 
   .title-last__part {
+    margin-top: 0;
     margin-left: 230px;
     align-self: flex-end;
   }
