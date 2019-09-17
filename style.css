@@ -116,8 +116,11 @@ input, button {
   margin-bottom: 15px;
 }
 
+.store-button:active, .store-button:focus {
+  outline: none;
+}
+
 .store-button:focus {
-  outline: 0px solid #5e42b0;
   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 
@@ -556,7 +559,6 @@ input, button {
     font-size: 90px;
     min-width: 880px;
     width: 80%;
-    max-width: 1532px;
     margin-top: 285px;
     margin-bottom: 210px;
   }
