@@ -692,9 +692,13 @@ input, button {
     flex-direction: row-reverse;
   }
 
+  .section-picture {
+    width: 50%;
+  }
+
   .section-bottom__page-img {
     display: block;
-    width: 50vw;
+    width: 100%;
   }
 
   .section-bottom__page .container {
